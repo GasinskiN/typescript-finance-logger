@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    /* background-color: #635985; */
+    /* color: #fff; */
+}
+input{
+    /* color: #fff; */
+    display: block;
+    /* background-color: #393053; */
+    outline-style: none;
+    /* outline-color: #18122B; */
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.input-field{
+    display: inline-block;
+    margin-right: 5%;
+}
