@@ -8,32 +8,39 @@
     <title>Finance logger</title>
 </head>
 <body>
-    <div>
-        <h1>Finance logger</h1>
-        <ul>
+
+    <div class="wrapper">
+      <h1>Finance Logger</h1>
+  
+      <!-- output list -->
+      <ul class="item-list">
         
-        </ul>
+      </ul>
     </div>
-    
+  
     <footer>
-        <form action="#">
-                <div class="input-field">
-                    <label for="name">Subject's name</label>
-                    <input type="text" name="name">
-                </div>
-                <div class="input-field">
-                    <label for="name">Reason for money exchange</label>
-                    <input type="text" name="reason">
-                </div>
-                <div class="input-field">
-                    <label for="money">Amount of money</label>
-                    <input type="number" name="money">
-                </div>
-        </form>
-
-
-
+      <form class="new-item-form">
+        <div class="field">
+          <label>Type:</label>
+          <select id="type">
+            <option value="invoice">Invoice</option>
+            <option value="payment">Payment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>To / From:</label>
+          <input type="text" id="tofrom">
+        </div>   
+        <div class="field">
+          <label>Details:</label>
+          <input type="text" id="details">
+        </div>
+        <div class="field">
+          <label>Amount ($):</label>
+          <input type="number" id="amount">
+        </div>
+        <button>Add</button>
+      </form>
     </footer>
-
-</body>
-</html>
+  </body>
+  </html>
