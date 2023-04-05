@@ -19,3 +19,20 @@ console.log(ninjaOne);
 
 let ale: any=25;
 
+let greet: Function;
+
+greet = () => {
+    console.log("Hello, there");
+}
+
+let add = (a:number, b:number, c?:number|string) =>{
+    return a+b;
+}
+
+console.log(add(10,22));
+
+type StringOrNum = string | number;
+
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has the id of ${uid}`)
+}
