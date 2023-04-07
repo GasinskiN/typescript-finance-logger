@@ -1,19 +1,6 @@
-class Invoice {
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ){}
-
-    format(){
-        return `${this.client} owes ${this.amount} for ${this.details}.`
-    }
-}
-
+import Invoice from "./classes/Invoice.js";
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
-
-
 const type = document.querySelector("#type") as HTMLSelectElement;
 const toFrom = document.querySelector("#tofrom") as HTMLInputElement;
 const details = document.querySelector("#details") as HTMLInputElement;
