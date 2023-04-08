@@ -4,7 +4,7 @@ body{
   }
   .wrapper{
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 130px auto;
   }
   h1{
     margin: 40px auto;
@@ -29,10 +29,15 @@ body{
     color: #333;
     margin: 8px 0 0;
   }
+  .sorting{
+    float: inline-start;
+    text-align: center;
+    /* margin-left: auto; */
+  }
   footer{
     background: #eee;
     padding: 60px;
-    margin-top: 60px;
+    margin-top: 20px;
   }
   form{
     max-width: 960px;
@@ -73,6 +78,6 @@ body{
     text-align: center;
     display: block;
     color: #999;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 0.7em;
   }
