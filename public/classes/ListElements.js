@@ -3,6 +3,7 @@ export default class ListElements {
         this.container = container;
     }
     render(data, sorting) {
+        this.container.innerHTML = "";
         data.forEach(doc => {
             const li = document.createElement("li");
             const p = document.createElement("p");
