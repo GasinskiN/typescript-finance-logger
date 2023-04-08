@@ -3,12 +3,17 @@ import HasFormatter from "../interfaces/HasFormatter"
 
 export default class Invoice implements HasFormatter {
     constructor(
+        readonly type: "invoice" | "payment",
         readonly client: string,
-        private details: string,
-        public amount: number
+        readonly details: string,
+        readonly amount: number
     ){}
 
     format(){
-        return `${this.client} owes ${this.amount} for ${this.details}.`
+        if (this.type === "invoice"){
+            return `${this.client} owes ${this.amount} for ${this.details}.`;
+        } else {
+            return `${this.client} is owed ${this.amount} for ${this.details}.`;
+        } 
     }
 }
