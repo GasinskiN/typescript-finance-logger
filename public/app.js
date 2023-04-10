@@ -10,18 +10,14 @@ const dataForRendering = [];
 let ul = document.querySelector(".item-list");
 const list = new ListElements(ul);
 sort.addEventListener("change", (e) => {
-    if (sort.value === "newest") {
-        list.render(dataForRendering, "newest");
-    }
-    else {
-        list.render(dataForRendering, "oldest");
-    }
+    list.renderAll(dataForRendering, sort.value);
 });
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    dataForRendering.push(new Invoice(type.value, toFrom.value, details.value, amount.valueAsNumber));
+    const addedInvoice = new Invoice(type.value, toFrom.value, details.value, amount.valueAsNumber);
+    dataForRendering.push(addedInvoice);
     toFrom.value = "";
     details.value = "";
     amount.value = "";
-    list.render(dataForRendering, sort.value);
+    list.renderAdded(addedInvoice, sort.value);
 });
