@@ -10,19 +10,25 @@ let firstObject = addNum({name: "maria", age: 22});
 
 console.log(firstObject.name)
 
+enum ResourceType {MECHANIC, DRIVER, PITCREW, MANAGER}
+
+
+
 interface Resource<T> {
     id: number;
-    resourceName: string;
+    resourceType: ResourceType;
     data: T
 }
 
+
+
 const secondObject: Resource<object>  = {
     id: 10,
-    resourceName: "chocolate",
+    resourceType: ResourceType.MANAGER,
     data: {name: "express", type: "automatic"}, 
 }
 const thirdObject: Resource<string>  = {
-    id: 10,
-    resourceName: "chocolate",
+    id: 11,
+    resourceType: ResourceType.MECHANIC,
     data: "water", 
 }
